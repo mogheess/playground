@@ -30,7 +30,7 @@ export default function Navbar() {
         about
       </a>
       <a
-        href="https://github.com/moghees"
+        href="https://github.com/mogheess/playground"
         target="_blank"
         rel="noopener noreferrer"
         className="animate-fade-in text-[11px] text-secondary tracking-[0.2em] uppercase hover:text-foreground transition-colors duration-300"
@@ -44,7 +44,7 @@ export default function Navbar() {
         style={{ animationDelay: "400ms" }}
         aria-label="toggle theme"
       >
-        {theme === "dark" ? "☀" : "●"}
+        {theme === "dark" ? "light" : "dark"}
       </button>
     </nav>
   );

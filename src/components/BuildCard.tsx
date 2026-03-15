@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 
 interface BuildCardProps {
+  slug: string;
   index: string;
   title: string;
   description: string;
@@ -74,6 +75,7 @@ function AsciiPreview({ seed, hovering }: { seed: number; hovering: boolean }) {
 }
 
 export default function BuildCard({
+  slug,
   index,
   title,
   description,
@@ -82,6 +84,7 @@ export default function BuildCard({
   href = "#",
   delay = 0,
 }: BuildCardProps) {
+  const sourceUrl = `https://github.com/mogheess/playground/blob/main/src/builds/${slug}.tsx`;
   const cardRef = useRef<HTMLAnchorElement>(null);
   const [hovering, setHovering] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -130,10 +133,19 @@ export default function BuildCard({
             </p>
           </div>
 
-          <div className="flex items-center mt-4">
+          <div className="flex items-center gap-4 mt-4">
             <span className="text-[11px] text-muted opacity-0 group-hover:opacity-100 group-hover:text-accent transition-all duration-300 translate-x-[-4px] group-hover:translate-x-0">
               view
             </span>
+            <a
+              href={sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="text-[10px] text-muted/0 group-hover:text-muted opacity-0 group-hover:opacity-70 hover:!opacity-100 hover:!text-secondary transition-all duration-300 tracking-wider"
+            >
+              src
+            </a>
           </div>
         </div>
 
