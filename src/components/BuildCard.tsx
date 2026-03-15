@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 interface BuildCardProps {
   slug: string;
@@ -84,8 +85,9 @@ export default function BuildCard({
   href = "#",
   delay = 0,
 }: BuildCardProps) {
-  const sourceUrl = `https://github.com/mogheess/playground/blob/main/src/builds/${slug}.tsx`;
-  const cardRef = useRef<HTMLAnchorElement>(null);
+  const router = useRouter();
+  const sourceUrl = `https://github.com/mogheess/pieces/blob/main/${slug}.tsx`;
+  const cardRef = useRef<HTMLDivElement>(null);
   const [hovering, setHovering] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
@@ -98,11 +100,16 @@ export default function BuildCard({
     });
   };
 
+  const handleClick = (e: React.MouseEvent) => {
+    if ((e.target as HTMLElement).closest("a")) return;
+    router.push(href);
+  };
+
   return (
-    <a
+    <div
       ref={cardRef}
-      href={href}
-      className="animate-fade-in-up group relative block border border-border rounded-sm overflow-hidden transition-all duration-400 hover:border-border-hover"
+      onClick={handleClick}
+      className="animate-fade-in-up group relative block border border-border rounded-sm overflow-hidden transition-all duration-400 hover:border-border-hover cursor-pointer"
       style={{ animationDelay: `${delay}ms` }}
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
@@ -141,8 +148,7 @@ export default function BuildCard({
               href={sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              className="text-[10px] text-muted/0 group-hover:text-muted opacity-0 group-hover:opacity-70 hover:!opacity-100 hover:!text-secondary transition-all duration-300 tracking-wider"
+              className="text-[10px] text-muted opacity-0 group-hover:opacity-70 hover:!opacity-100 hover:!text-secondary transition-all duration-300 tracking-wider"
             >
               src
             </a>
@@ -162,6 +168,6 @@ export default function BuildCard({
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background/20 pointer-events-none" />
         </div>
       </div>
-    </a>
+    </div>
   );
 }

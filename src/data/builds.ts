@@ -24,6 +24,7 @@ export const builds: Build[] = [
     description:
       "browser-based pixel art animation tool. draw on a grid, create frames, preview with onion skinning, export as gif or css spritesheet.",
     previewSeed: 77,
+    image: "/pixel.png",
   },
   {
     slug: "image-reveal",

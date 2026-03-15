@@ -9,8 +9,8 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "moghees — playground",
-  description: "experimental frontend builds, animations, and creative coding",
+  title: "moghees",
+  description: "things i build, break, and ship. experiments and products.",
 };
 
 export default function RootLayout({

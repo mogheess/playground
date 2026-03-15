@@ -47,8 +47,8 @@ export default function Hero() {
 
       <div className="animate-fade-in-up" style={{ animationDelay: "240ms" }}>
         <p className="text-sm text-muted leading-[1.8] max-w-md font-light">
-          a collection of frontend experiments, creative coding sketches,
-          and interactive things built to learn, break, and rebuild.
+          a small collection of things i build, break, and ship. from creative
+          experiments to products.
         </p>
       </div>
     </section>
