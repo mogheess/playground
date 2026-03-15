@@ -7,6 +7,7 @@ interface ShipCardProps {
   description: string;
   url?: string;
   type: "ios" | "web" | "library";
+  wip?: boolean;
   delay?: number;
 }
 
@@ -15,6 +16,7 @@ export default function ShipCard({
   description,
   url,
   type,
+  wip = false,
   delay = 0,
 }: ShipCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -56,9 +58,16 @@ export default function ShipCard({
           <h3 className="text-[14px] font-medium tracking-wide text-secondary group-hover:text-foreground transition-colors duration-300">
             {name}
           </h3>
-          <span className="text-[9px] text-muted/60 tracking-[0.2em] uppercase font-light">
-            {type}
-          </span>
+          <div className="flex items-center gap-2">
+            {wip && (
+              <span className="text-[9px] text-accent tracking-[0.2em] uppercase font-medium border border-accent/30 rounded-sm px-2 py-0.5">
+                wip
+              </span>
+            )}
+            <span className="text-[9px] text-muted/60 tracking-[0.2em] uppercase font-light">
+              {type}
+            </span>
+          </div>
         </div>
 
         <p className="text-xs text-muted leading-[1.7] font-light group-hover:text-secondary transition-colors duration-500">

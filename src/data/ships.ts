@@ -3,6 +3,7 @@ export interface Ship {
   description: string;
   url?: string;
   type: "ios" | "web" | "library";
+  wip?: boolean;
 }
 
 export const ships: Ship[] = [
@@ -13,27 +14,24 @@ export const ships: Ship[] = [
     type: "ios",
   },
   {
-    name: "aurora ui",
-    description: "modern react component library built with next.js and tailwind.",
-    url: "https://auroraui.dev",
-    type: "library",
-  },
-  {
     name: "careerweave ai",
     description: "saas for generating tailored resumes and cover letters with gemini.",
     url: "https://careerweaveai.com",
     type: "web",
   },
   {
-    name: "kalend.io",
-    description: "ai-native scheduling app with natural language event creation.",
-    url: "https://kalend.io",
-    type: "web",
+    name: "aurora ui",
+    description: "modern react component library built with next.js and tailwind.",
+    url: "https://auroraui.dev",
+    type: "library",
+    wip: true,
   },
+  
   {
     name: "whosaidwhat",
     description: "multiplayer guessing game where you figure out who said what.",
     url: "https://whosaidwhat.app",
     type: "web",
+    wip: true,
   },
 ];
