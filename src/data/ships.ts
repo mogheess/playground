@@ -2,7 +2,7 @@ export interface Ship {
   name: string;
   description: string;
   url?: string;
-  type: "ios" | "web" | "library";
+  type: "ios" | "web" | "library" | "cli";
   wip?: boolean;
 }
 
@@ -12,6 +12,12 @@ export const ships: Ship[] = [
     description: "ios app for prayer times, tracking, and reminders.",
     url: "https://apps.apple.com/us/app/salah-first/id6757348350",
     type: "ios",
+  },
+  {
+    name: "awqat-cli",
+    description: "terminal tool for islamic prayer times. location-aware, configurable calculation methods.",
+    url: "https://github.com/mogheess/awqat-cli",
+    type: "cli",
   },
   {
     name: "careerweave ai",

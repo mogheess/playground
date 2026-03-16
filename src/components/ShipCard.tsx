@@ -6,7 +6,7 @@ interface ShipCardProps {
   name: string;
   description: string;
   url?: string;
-  type: "ios" | "web" | "library";
+  type: "ios" | "web" | "library" | "cli";
   wip?: boolean;
   delay?: number;
 }
