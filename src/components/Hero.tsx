@@ -25,18 +25,18 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="pt-24 sm:pt-32 pb-20 max-w-5xl mx-auto px-6">
+    <section className="pt-28 sm:pt-36 pb-20 max-w-5xl mx-auto px-6">
       <div className="animate-fade-in-up" style={{ animationDelay: "0ms" }}>
-        <h1 className="text-3xl sm:text-4xl font-normal tracking-tight text-foreground mb-3">
+        <h1 className="text-4xl sm:text-5xl font-normal tracking-tight text-foreground mb-4">
           moghees
         </h1>
       </div>
 
       <div className="animate-fade-in-up" style={{ animationDelay: "120ms" }}>
         <div className="flex items-center gap-3 mb-6">
-          <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
+          <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
           <p
-            className={`text-sm text-secondary font-light tracking-wide transition-all duration-300 ${
+            className={`text-lg text-secondary font-light tracking-wide transition-all duration-300 ${
               visible ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -46,7 +46,7 @@ export default function Hero() {
       </div>
 
       <div className="animate-fade-in-up" style={{ animationDelay: "240ms" }}>
-        <p className="text-sm text-muted leading-[1.8] max-w-md font-light">
+        <p className="text-lg text-muted leading-[1.75] max-w-lg font-light">
           a small collection of things i build, break, and ship. from creative
           experiments to products.
         </p>

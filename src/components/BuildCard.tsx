@@ -125,37 +125,37 @@ export default function BuildCard({
       )}
 
       <div className="relative z-10 flex flex-col sm:flex-row">
-        <div className="flex-1 p-5 sm:p-6 flex flex-col justify-between min-h-[140px]">
+        <div className="flex-1 p-6 sm:p-7 flex flex-col justify-between min-h-[160px]">
           <div>
-            <span className="text-[11px] text-muted font-light tracking-[0.25em] mb-3 block">
+            <span className="text-[13px] text-muted font-light tracking-[0.25em] mb-3 block">
               {index}
             </span>
 
-            <h3 className="text-[15px] font-medium tracking-wide text-secondary group-hover:text-foreground transition-colors duration-300 mb-2">
+            <h3 className="text-[18px] font-medium tracking-wide text-secondary group-hover:text-foreground transition-colors duration-300 mb-2">
               {title}
             </h3>
 
-            <p className="text-xs text-muted leading-[1.7] font-light group-hover:text-secondary transition-colors duration-500 max-w-xs">
+            <p className="text-sm text-muted leading-[1.7] font-light group-hover:text-secondary transition-colors duration-500 max-w-sm">
               {description}
             </p>
           </div>
 
-          <div className="flex items-center gap-4 mt-4">
-            <span className="text-[11px] text-muted opacity-0 group-hover:opacity-100 group-hover:text-accent transition-all duration-300 translate-x-[-4px] group-hover:translate-x-0">
+          <div className="flex items-center gap-4 mt-5">
+            <span className="text-[13px] text-muted opacity-0 group-hover:opacity-100 group-hover:text-accent transition-all duration-300 translate-x-[-4px] group-hover:translate-x-0">
               view
             </span>
             <a
               href={sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[10px] text-muted opacity-0 group-hover:opacity-70 hover:!opacity-100 hover:!text-secondary transition-all duration-300 tracking-wider"
+              className="text-[12px] text-muted opacity-0 group-hover:opacity-70 hover:!opacity-100 hover:!text-secondary transition-all duration-300 tracking-wider"
             >
               src
             </a>
           </div>
         </div>
 
-        <div className="w-full sm:w-[200px] h-[120px] sm:h-auto border-t sm:border-t-0 sm:border-l border-border/50 bg-elevated flex items-center justify-center overflow-hidden relative">
+        <div className="w-full sm:w-[210px] h-[120px] sm:h-auto border-t sm:border-t-0 sm:border-l border-border/50 bg-elevated flex items-center justify-center overflow-hidden relative">
           {image ? (
             <img
               src={image}

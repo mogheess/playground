@@ -3,26 +3,26 @@ export default function About() {
     <section id="about" className="max-w-5xl mx-auto px-6 pb-24">
       <div className="border-t border-border pt-16">
         <div className="flex items-center gap-4 mb-8">
-          <span className="text-xs tracking-[0.25em] uppercase text-muted">
+          <span className="text-sm tracking-[0.25em] uppercase text-muted">
             about
           </span>
           <div className="flex-1 h-px bg-border" />
         </div>
 
-        <div className="max-w-lg space-y-4">
-          <p className="text-sm text-secondary leading-[1.8] font-light">
+        <div className="max-w-2xl space-y-5">
+          <p className="text-lg text-secondary leading-[1.75] font-light">
             i&apos;m moghees, a fullstack engineer. i build products,
             experiment with ideas, and sometimes just make things because
             they seem interesting. a lot of what&apos;s here was built with
             claude in a sitting or two for fun.
           </p>
 
-          <p className="text-sm text-secondary leading-[1.8] font-light">
+          <p className="text-lg text-secondary leading-[1.75] font-light">
             some of it is rough, some of it is in the app store.
             the point is to keep building.
           </p>
 
-          <p className="text-sm text-muted leading-[1.8] font-light mt-6">
+          <p className="text-lg text-muted leading-[1.75] font-light mt-6">
             if something here catches your eye or you want to talk, find me on{" "}
             <a
               href="https://github.com/mogheess"

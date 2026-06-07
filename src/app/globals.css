@@ -31,10 +31,10 @@
   --surface-dim: #d6d3ce;
   --border: #d0ccc6;
   --border-hover: #aaa49c;
-  --text-primary: #151515;
-  --text-secondary: #444444;
-  --text-muted: #777777;
-  --text-faint: #999999;
+  --text-primary: #111111;
+  --text-secondary: #333333;
+  --text-muted: #5a5a5a;
+  --text-faint: #808080;
   --accent: #e85d2a;
   --accent-dim: #e85d2a15;
   --highlight: #e8003d;
@@ -86,8 +86,14 @@ html {
 body {
   background: var(--bg);
   color: var(--text-primary);
-  font-family: "JetBrains Mono", monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "SF Pro Text", "Helvetica Neue", "Segoe UI", system-ui, sans-serif;
   overflow-x: hidden;
+  letter-spacing: -0.011em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "ss01", "cv01", "kern";
   transition: background 0.4s ease, color 0.4s ease;
 }
 

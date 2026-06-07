@@ -26,15 +26,15 @@ export default function BuildShell({
       <header className="max-w-5xl mx-auto px-6 py-8 flex items-center justify-between">
         <Link
           href="/"
-          className="text-[11px] text-muted tracking-[0.2em] uppercase hover:text-secondary transition-colors duration-300"
+          className="text-[13px] text-muted tracking-[0.2em] uppercase hover:text-secondary transition-colors duration-300"
         >
           back
         </Link>
         <div className="text-right">
-          <h1 className="text-sm font-medium text-foreground tracking-wide">
+          <h1 className="text-base font-medium text-foreground tracking-wide">
             {title}
           </h1>
-          <p className="text-[11px] text-muted font-light mt-1 max-w-xs">
+          <p className="text-[13px] text-muted font-light mt-1 max-w-sm">
             {description}
           </p>
         </div>

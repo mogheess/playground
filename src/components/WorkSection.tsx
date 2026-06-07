@@ -20,16 +20,16 @@ export default function WorkSection() {
         <div className="flex items-center gap-1">
           <button
             onClick={() => setTab("pieces")}
-            className={`text-xs tracking-[0.25em] uppercase transition-colors duration-300 px-1 ${
+            className={`text-sm tracking-[0.25em] uppercase transition-colors duration-300 px-1 ${
               tab === "pieces" ? "text-foreground" : "text-muted hover:text-secondary"
             }`}
           >
             {tab === "pieces" ? <GlitchText text="pieces" /> : "pieces"}
           </button>
-          <span className="text-muted/30 text-xs">/</span>
+          <span className="text-muted/30 text-sm">/</span>
           <button
             onClick={() => setTab("ships")}
-            className={`text-xs tracking-[0.25em] uppercase transition-colors duration-300 px-1 ${
+            className={`text-sm tracking-[0.25em] uppercase transition-colors duration-300 px-1 ${
               tab === "ships" ? "text-foreground" : "text-muted hover:text-secondary"
             }`}
           >
@@ -37,7 +37,7 @@ export default function WorkSection() {
           </button>
         </div>
         <div className="flex-1 h-px bg-border" />
-        <span className="text-xs text-muted/60 font-light">
+        <span className="text-sm text-muted/60 font-light">
           {count}
         </span>
       </div>

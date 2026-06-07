@@ -38,7 +38,7 @@ export default function ShipCard({
     <Wrapper
       {...linkProps}
       ref={cardRef as React.Ref<HTMLAnchorElement & HTMLDivElement>}
-      className="animate-fade-in-up group relative block border border-border rounded-sm overflow-hidden transition-all duration-400 hover:border-border-hover p-5"
+      className="animate-fade-in-up group relative block border border-border rounded-sm overflow-hidden transition-all duration-400 hover:border-border-hover p-6"
       style={{ animationDelay: `${delay}ms` }}
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
@@ -55,27 +55,27 @@ export default function ShipCard({
 
       <div className="relative z-10">
         <div className="flex items-center justify-between mb-2">
-          <h3 className="text-[14px] font-medium tracking-wide text-secondary group-hover:text-foreground transition-colors duration-300">
+          <h3 className="text-[18px] font-medium tracking-wide text-secondary group-hover:text-foreground transition-colors duration-300">
             {name}
           </h3>
           <div className="flex items-center gap-2">
             {wip && (
-              <span className="text-[9px] text-accent tracking-[0.2em] uppercase font-medium border border-accent/30 rounded-sm px-2 py-0.5">
+              <span className="text-[11px] text-accent tracking-[0.2em] uppercase font-medium border border-accent/30 rounded-sm px-2 py-0.5">
                 wip
               </span>
             )}
-            <span className="text-[9px] text-muted/60 tracking-[0.2em] uppercase font-light">
+            <span className="text-[11px] text-muted/60 tracking-[0.2em] uppercase font-light">
               {type}
             </span>
           </div>
         </div>
 
-        <p className="text-xs text-muted leading-[1.7] font-light group-hover:text-secondary transition-colors duration-500">
+        <p className="text-sm text-muted leading-[1.7] font-light group-hover:text-secondary transition-colors duration-500">
           {description}
         </p>
 
         {url && (
-          <span className="text-[10px] text-muted opacity-0 group-hover:opacity-100 group-hover:text-accent transition-all duration-300 mt-3 block tracking-wider">
+          <span className="text-[12px] text-muted opacity-0 group-hover:opacity-100 group-hover:text-accent transition-all duration-300 mt-3 block tracking-wider">
             open →
           </span>
         )}
